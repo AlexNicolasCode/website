@@ -1,8 +1,14 @@
-import 'tailwindcss/tailwind.css'
-import './home.css'
+import '../src/styles/home.css';
+import '../src/styles/reset.css';
+import type { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import { FilterContextProvider } from "../src/contexts/FilterContext"
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <FilterContextProvider>
+      <Component {...pageProps} />
+    </FilterContextProvider>
+  )
 }
-
 export default MyApp
