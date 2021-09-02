@@ -6,6 +6,7 @@ import Header from "../src/components/Header";
 import ProjectsSection from '../src/components/Sections/Projects';
 import Introduction from '../src/components/Sections/Introduction';
 import About from '../src/components/Sections/About';
+import Contact from '../src/components/Sections/Contact';
 
 import { gql } from "@apollo/client";
 import { client } from "../src/services/api";
@@ -64,13 +65,17 @@ export default function Home({ allProjects, allTechs }: FilterProps) {
         <Introduction />
         <About />
         <ProjectsSection />
-        <section id="contact" className="text-black mt-10 flex items-center justify-center w-full h-12 border-t">
-          <p>Contact: contato.alexnicolas@gmail.com</p> 
-        </section>
+        <Contact />
       </main>
 
-      <footer className="bg-black text-white flex items-center justify-center w-full h-12">
-          Developed by Alex Nicolas
+      <footer className="bg-black flex items-center justify-center w-full h-10">
+        <article className="text-center text-gray-500 text-sm">
+          <p className="text-gray-400 hover:text-gray-300 text-sm">
+           Contato.AlexNicolas@gmail.com
+          </p>
+
+          <p>Developed by Alex Nicolas</p>
+        </article>
       </footer>
     </>
   )
