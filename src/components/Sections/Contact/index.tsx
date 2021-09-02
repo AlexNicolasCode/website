@@ -55,14 +55,14 @@ export default function ContactUs() {
                 type="email" 
                 name="email" 
                 className="w-full h-12 pl-2 focus:outline-none text-sm md:h-8" 
-                placeholder="What's your mail?"
+                placeholder="What's your email?"
                 onChange={(e) => setForm({...form, email: e.target.value})}
                 value={form.email}
               />
               <textarea  
                 name="message" 
                 className="w-full h-32 outline-none mt-3 pl-2 pt-2 focus:outline-none text-sm md:h-64" 
-                placeholder="Descrive about your contact"
+                placeholder="Leave a message"
                 onChange={(e) => setForm({...form, message: e.target.value})}
                 value={form.message}
               />
